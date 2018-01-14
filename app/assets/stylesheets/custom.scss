@@ -1,2 +1,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+/* 記事 */
+
+.article {
+	border: 1px solid #5E5E5E;
+	/*
+	width: 390px;
+	height: 220px;
+	background-image: url("https://www.necoichi.co.jp/files/topics/5438_ext_06_0.jpg");
+	background-size: cover;
+	*/
+}
+/* 背景透過用 */
+/*
+.bkRGBA {
+	height: 100%;
+	background: rgba(255, 255, 255, 0.5);
+}
+*/
