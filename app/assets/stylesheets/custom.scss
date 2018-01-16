@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 body {
   padding-top: 80px;
   padding-bottom: 20px;
@@ -10,14 +16,17 @@ body {
 .article {
 	border: 1px solid #F1F1F1;
 	border-radius: 5px;
-	background-image: url("https://www.necoichi.co.jp/files/topics/5438_ext_06_0.jpg");
-	background-size: cover;
 	position: relative;
 	height: 150px;
+}
+.article img {
+	height: 100%;
+	width: 100%;
 }
 /* 背景透過用 */
 .inner_text {
 	height: 100%;
+	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -29,4 +38,13 @@ body {
 	font-size: 80%;
 	font-color: #0B0808;
 	font-style: oblique;
+}
+
+/* デバッグ */
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	@include box_sizing;
 }

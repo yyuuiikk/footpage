@@ -1,34 +1,13 @@
 <div class="row">
+	<% @articles.each do |article| %>
 	<div class="col-md-4">
 		<div class="article">
+			<img src="<%= article.thumnail %>" alt="">
 			<div class="inner_text">
-				<h2><a href="#" target="_blank">Heading</a></h2>
-				<p class="source_site"><a href="#" target="_blank">テストサイト</a></p>
+				<h2><a href="<%= article.link %>" target="_blank"><%= article.title %></a></h2>
+				<p class="source_site"><a href="<%= article.site_top %>" target="_blank"><%= article.site_name %></a></p>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-4">
-		<div class="article">
-			<div class="inner_text">
-				<h2><a href="#" target="_blank">Heading</a></h2>
-				<p class="source_site"><a href="#" target="_blank">テストサイト</a></p>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="article">
-			<div class="inner_text">
-				<h2><a href="#" target="_blank">Heading</a></h2>
-				<p class="source_site"><a href="#" target="_blank">テストサイト</a></p>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="article">
-			<div class="inner_text">
-				<h2><a href="#" target="_blank">Heading</a></h2>
-				<p class="source_site"><a href="#" target="_blank">テストサイト</a></p>
-			</div>
-		</div>
-	</div>
+	<% end %>
 </div>
