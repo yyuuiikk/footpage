@@ -14,14 +14,29 @@ body {
 
 /* 記事 */
 .article {
-	border: 1px solid #F1F1F1;
+	border: 1px solid #C3C3C3;
 	border-radius: 5px;
 	position: relative;
-	height: 150px;
+	height: 200px;
 }
 .article img {
 	height: 100%;
 	width: 100%;
+}
+.article h2 a {
+	color: #000000;
+	text-decoration: none;
+	&:link {
+		color: #000000;
+	}
+	&:visited {
+	}
+	&:hover {
+		color: #E41F7B;
+	}
+	&:active {
+		color: #E41F7B;
+	}
 }
 /* 背景透過用 */
 .inner_text {
@@ -31,8 +46,12 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.7);
 	overflow: auto;
+}
+.inner_text h2 {
+	font-color: #FFFFFF;
+	font-weight: bold;
 }
 .source_site {
 	font-size: 80%;
