@@ -4,6 +4,7 @@
 		<div class="article">
 			<%= image_tag article.thumnail %>
 			<div class="inner_text">
+				<p class="date"><%= convert_date(article.date) %></p>
 				<h2><a href="<%= article.link %>" target="_blank"><%= article.title %></a></h2>
 				<p class="source_site"><a href="<%= article.site_top %>" target="_blank"><%= article.site_name %></a></p>
 			</div>
