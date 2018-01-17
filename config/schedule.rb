@@ -10,9 +10,9 @@ set :output, "/home/vagrant/ruby/rails5.0.3/footpage/log/crontab.log"
 set :environment, :development
 
 # 毎分実行
-every 1.minute do
+every 30.minutes do
 	command "date"
-  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/soccer_digest_premier.rb"
+  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_premier.rb"
   rake "db:seed"
 end
 
