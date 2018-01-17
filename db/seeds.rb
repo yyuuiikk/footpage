@@ -8,5 +8,5 @@
 require "csv"
 
 CSV.foreach('/home/vagrant/ruby/rails5.0.3/footpage/db/csv/site_info.csv') do |row|
-	Article.create(date: row[0], thumnail: row[1], title: row[2], link: row[3], site_name: row[4], site_top: row[5])
+	Article.create(date: row[0], thumnail: row[1], title: row[2], link: row[3], site_name: row[4], site_top: row[5], category: row[6])
 end
