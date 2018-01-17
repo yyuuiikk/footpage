@@ -13,6 +13,9 @@ set :environment, :development
 every 30.minutes do
 	command "date"
   command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_premier.rb"
+  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_liga.rb"
+  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_bundes.rb"
+  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_serie.rb"
   rake "db:seed"
 end
 
