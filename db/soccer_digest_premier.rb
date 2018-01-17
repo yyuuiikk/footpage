@@ -27,7 +27,7 @@ doc.xpath('//div[@class="entry"]').each do |node|
 						<< site_top_url	
 
 	# 追記モードでcsvファイルに書き込む
-	CSV.open("csv/site_info.csv", "a") do |csv|
+	CSV.open("/home/vagrant/ruby/rails5.0.3/footpage/db/csv/site_info.csv", "a") do |csv|
 		csv << site_info
 	end
 
