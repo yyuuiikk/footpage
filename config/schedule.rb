@@ -12,7 +12,7 @@ set :environment, :development
 # 毎分実行
 every 1.minute do
 	command "date"
-  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/db/soccer_digest_premier.rb"
+  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/soccer_digest_premier.rb"
   rake "db:seed"
 end
 
