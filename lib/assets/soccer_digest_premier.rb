@@ -5,15 +5,21 @@ require 'csv'
 # スクレイピング対象
 site_top_url = 'http://www.soccerdigestweb.com'
 search_premier_url = '/tag_list/tag_search=1&tag_id=35'
+# csvファイル
+csv_file = "/home/vagrant/ruby/rails5.0.3/footpage/db/csv/site_info.csv"
 # csv出力のための配列
 site_info = []
+# CSVファイルを空に
+CSV.open(csv_file, "w") do |csv|
+	csv = nil
+end
 
+# Nokogiriでページ情報を取得
 charset = nil
 html = open(site_top_url + search_premier_url) do |f|
 	charset = f.charset
 	f.read
 end
-
 doc = Nokogiri::HTML.parse(html, nil, charset)
 
 doc.xpath('//div[@class="entry"]').each do |node|
@@ -28,7 +34,7 @@ doc.xpath('//div[@class="entry"]').each do |node|
 						<< site_top_url	
 
 	# 追記モードでcsvファイルに書き込む
-	CSV.open("/home/vagrant/ruby/rails5.0.3/footpage/db/csv/site_info.csv", "a") do |csv|
+	CSV.open(csv_file, "a") do |csv|
 		csv << site_info
 	end
 
