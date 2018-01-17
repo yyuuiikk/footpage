@@ -13,6 +13,20 @@ body {
 	background-color: #F5F5F5;
 }
 
+/* ナビゲーションバー */
+#project_title {
+	color: #C8C8C8;
+	&:hover {
+		color: #4688F1;
+	}
+	font-size: 24px;
+}
+#nav1 {
+	&:hover {
+		color: #4688F1;
+	}
+}
+
 /* トップページ */
 .toppage_title {
 	position: absolute;

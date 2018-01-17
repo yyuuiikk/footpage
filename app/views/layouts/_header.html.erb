@@ -7,20 +7,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-			<%= link_to "Football 広場", root_path, class: "navbar-brand" %>
+			<%= link_to "Football 広場", root_path, class: "navbar-brand", id: "project_title" %>
     </div>
+		<% if !current_page?(root_path) %>
     <div id="navbar" class="navbar-collapse collapse">
-			<!--
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" placeholder="Email" class="form-control">
-        </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
-      </form>
-			-->
-    </div><!--/.navbar-collapse -->
+      <div class="navbar-right">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle", data-toggle="dropdown", id="nav1">海外サッカー <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><%= link_to 'プレミアリーグ', premier_path %></li>
+							<li><%= link_to 'リーガ・エスパニョーラ', liga_path %></li>
+							<li><%= link_to 'ブンデスリーガ', bundes_path %></li>
+							<li><%= link_to 'セリエA', serie_path %></li>
+						</ul>
+					</li>
+				</ul>
+      </div>
+    </div>
+		<% end %>
   </div>
 </nav>
