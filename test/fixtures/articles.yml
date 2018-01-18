@@ -1,5 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# premier
 one:
   date: 2018-01-14
   thumnail: http://img.com
@@ -9,11 +10,3 @@ one:
   site_top: http://testsite.com/
   category: 0
 
-two:
-  date: 2018-01-14
-  thumnail: MyText2
-  title: MyString2
-  link: MyText2
-  site_name: MyString2
-  site_top: MyText2
-  category: 1
