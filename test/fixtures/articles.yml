@@ -2,11 +2,11 @@
 
 one:
   date: 2018-01-14
-  thumnail: MyText
-  title: MyString
-  link: MyText
-  site_name: MyString
-  site_top: MyText
+  thumnail: http://img.com
+  title: テストタイトル
+  link: http://example.com/link
+  site_name: テストサイト
+  site_top: http://testsite.com/
   category: 0
 
 two:
