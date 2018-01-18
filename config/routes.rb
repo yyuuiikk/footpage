@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 	get 	'/bundes',		to: 'static_pages#bundes'
 	get 	'/liga',		to: 'static_pages#liga'
 	get 	'/serie',		to: 'static_pages#serie'
+
 end

@@ -7,11 +7,13 @@ one:
   link: MyText
   site_name: MyString
   site_top: MyText
+  category: 0
 
 two:
   date: 2018-01-14
-  thumnail: MyText
-  title: MyString
-  link: MyText
-  site_name: MyString
-  site_top: MyText
+  thumnail: MyText2
+  title: MyString2
+  link: MyText2
+  site_name: MyString2
+  site_top: MyText2
+  category: 1
