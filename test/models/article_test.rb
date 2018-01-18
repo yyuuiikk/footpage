@@ -10,4 +10,10 @@ class ArticleTest < ActiveSupport::TestCase
 		assert @article.valid?
 	end
 
+	test "article should be unique" do
+		duplicate_article = @article.dup
+		@article.save
+		assert_not duplicate_article.valid?
+	end
+
 end
