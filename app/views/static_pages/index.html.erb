@@ -1,34 +1,42 @@
 <div class="row">
 	<div class="col-md-4 article_box">
 		<div class="article">
-			<%= image_tag 'premier-league-logo-header.svg' %>
-			<div class="inner_text">
-				<h2 class="toppage_title"><%= link_to "プレミアリーグ", premier_path %></h2>
-			</div>
+			<a href="<%= premier_path %>">
+				<%= image_tag 'premier-league-logo-header.svg' %>
+				<div class="inner_text">
+					<h2 class="toppage_title">プレミアリーグ</h2>
+				</div>
+			</a>
 		</div>
 	</div>
 	<div class="col-md-4 article_box">
 		<div class="article">
-			<%= image_tag 'laliga-v-300x300.jpg' %>
-			<div class="inner_text">
-				<h2 class="toppage_title"><%= link_to "リーガ・エスパニョーラ", liga_path %></h2>
-			</div>
+			<a href="<%= liga_path %>">
+				<%= image_tag 'laliga-v-300x300.jpg' %>
+				<div class="inner_text">
+					<h2 class="toppage_title">リーガ・エスパニョーラ</h2>
+				</div>
+			</a>
 		</div>
 	</div>
 	<div class="col-md-4 article_box">
 		<div class="article">
-			<%= image_tag 'bundes.png' %>
-			<div class="inner_text">
-				<h2 class="toppage_title"><%= link_to "ブンデスリーガ", bundes_path %></h2>
-			</div>
+			<a href="<%= bundes_path %>">
+				<%= image_tag 'bundes.png' %>
+				<div class="inner_text">
+					<h2 class="toppage_title">ブンデスリーガ</h2>
+				</div>
+			</a>
 		</div>
 	</div>
 	<div class="col-md-4 article_box">
 		<div class="article">
-			<%= image_tag 'serie_logo.png' %>
-			<div class="inner_text">
-				<h2 class="toppage_title"><%= link_to "セリエA", serie_path %></h2>
-			</div>
+			<a href="<%= serie_path %>">
+				<%= image_tag 'serie_logo.png' %>
+				<div class="inner_text">
+					<h2 class="toppage_title">セリエA</h2>
+				</div>
+			</a>
 		</div>
 	</div>
 </div>

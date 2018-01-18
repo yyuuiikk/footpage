@@ -35,6 +35,19 @@ body {
 	bottom: 0;
 	left: 10%;
 	right: 0;
+	color: #000000;
+	text-decoration: none;
+	&:link {
+		color: #000000;
+	}
+	&:visited {
+	}
+	&:hover {
+		color: #E41F7B;
+	}
+	&:active {
+		color: #E41F7B;
+	}
 }
 
 /* 記事 */
