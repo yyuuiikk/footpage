@@ -10,3 +10,13 @@ one:
   site_top: http://testsite.com/
   category: 0
 
+<% 20.times do |num| %>
+article_<%= num %>:
+  date: 2018-01-14
+  thumnail: http://img.com/<%= num %>
+  title: テストタイトル<%= num %>
+  link: http://example.com/link/<%= num %>
+  site_name: テストサイト
+  site_top: http://testsite.com/
+  category: 0
+<% end %>
