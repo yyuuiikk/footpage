@@ -11,12 +11,12 @@ set :environment, :development
 
 # 毎分実行
 every 30.minutes do
-	command "date"
-	rake "task_scraping:delete_csv "
-	rake "task_scraping:scraping_soccerdigest_premier"
-	rake "task_scraping:scraping_soccerdigest_liga"
-	rake "task_scraping:scraping_soccerdigest_bundes"
-	rake "task_scraping:scraping_soccerdigest_serie"
-  rake "db:seed"
+	#command "date"
+	#rake "task_scraping:delete_csv "
+	#rake "task_scraping:scraping_soccerdigest_premier"
+	#rake "task_scraping:scraping_soccerdigest_liga"
+	#rake "task_scraping:scraping_soccerdigest_bundes"
+	#rake "task_scraping:scraping_soccerdigest_serie"
+  #rake "db:seed"
 end
 
