@@ -10,7 +10,7 @@ set :output, "/home/vagrant/ruby/rails5.0.3/footpage/log/crontab.log"
 set :environment, :development
 
 # 毎分実行
-every 5.minutes do
+every 30.minutes do
 	command "date"
 	rake "task_scraping:delete_csv "
 	rake "task_scraping:scraping_soccerdigest_premier"

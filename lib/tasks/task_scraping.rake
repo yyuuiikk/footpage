@@ -10,7 +10,7 @@ namespace :task_scraping do
 		attr_reader :domain, :search_url, :category
 	
 		# csvファイル
-		CSV_FILE = Rails.root.to_s + "db/csv/site_info.csv"
+		CSV_FILE = Rails.root.to_s + "/db/csv/site_info.csv"
 	
 		def initialize(domain, search_url, category)
 			# スクレイピング対象
