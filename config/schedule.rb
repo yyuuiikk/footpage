@@ -10,12 +10,13 @@ set :output, "/home/vagrant/ruby/rails5.0.3/footpage/log/crontab.log"
 set :environment, :development
 
 # 毎分実行
-every 30.minutes do
+every 5.minutes do
 	command "date"
-  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_premier.rb"
-  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_liga.rb"
-  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_bundes.rb"
-  command "/home/vagrant/.rbenv/shims/ruby /home/vagrant/ruby/rails5.0.3/footpage/lib/assets/scraping_soccerdigest_serie.rb"
+	rake "task_scraping:delete_csv "
+	rake "task_scraping:scraping_soccerdigest_premier"
+	rake "task_scraping:scraping_soccerdigest_liga"
+	rake "task_scraping:scraping_soccerdigest_bundes"
+	rake "task_scraping:scraping_soccerdigest_serie"
   rake "db:seed"
 end
 
