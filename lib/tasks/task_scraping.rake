@@ -1,27 +1,33 @@
 namespace :task_scraping do
 
+	#####  Module定義
+	module MyConstant
+		CSV_FILE = Rails.root.to_s + "/db/csv/site_info.csv"
+	end
+	#####
+
 	#####  Class定義
 	require 'nokogiri'
 	require 'open-uri'
 	require 'csv'
 	
 	class Scrape
+
+		include MyConstant
 	
 		attr_reader :domain, :search_url, :category
-	
-		# csvファイル
-		CSV_FILE = Rails.root.to_s + "/db/csv/site_info.csv"
 	
 		def initialize(domain, search_url, category)
 			# スクレイピング対象
 			@site_url = 'http://' + domain + '/'		## ex. example.com
 			@search_url = search_url								## ex. ?tag_id=35
 			@category = category										## ex. 0
+			MyConstant.freeze
 		end
 	
 		def remove_csv
 			# CSVファイルを空に
-			CSV.open(CSV_FILE, "w") do |csv|
+			CSV.open(MyConstant::CSV_FILE, "w") do |csv|
 				csv = nil
 			end
 		end
@@ -48,7 +54,7 @@ namespace :task_scraping do
 									<< @category
 			
 				# 追記モードでcsvファイルに書き込む
-				CSV.open(CSV_FILE, "a") do |csv|
+				CSV.open(MyConstant::CSV_FILE, "a") do |csv|
 					csv << site_info
 				end
 			end
